@@ -37,10 +37,10 @@ class BabySet:
 		Raises KeyError if elem is not contained in the set.
 		"""
 		try:
-			el=self.get(elem)
+			element = self.get(elem) #check for element within the set 
 			self.__data.remove(elem)
-			return el
-		except ValueError as e:
+			return elements          #returns element being removed
+		except ValueError as e:		 #the exception needs to be a ValueError to check if the function is receiving the appropriate value
 			raise KeyError
 
 	def get(self, elem):
@@ -55,7 +55,7 @@ class BabySet:
 	
 	def clear(self):
 		"""Remove all elements from the set."""
-		self.__data = []
+		self.__data = []			#define an empty list to clear the set
 
 	def size(self):
 		"""Returns the size of the set."""
